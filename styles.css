@@ -242,7 +242,7 @@ button:active {
         /* Hủy flex để nó không căn giữa nữa */
         display: block;
         margin: 0;
-        padding: 16vh 12px 24px;  /* 10vh khoảng trống trên cùng, đẩy box xuống vùng trời */
+        padding: 22vh 12px 24px;  /* 10vh khoảng trống trên cùng, đẩy box xuống vùng trời */
 
         background-image: url("xmas-bgg.jpg");
         background-repeat: no-repeat;
@@ -267,4 +267,5 @@ button:active {
         letter-spacing: 1.2px;
     }
 }
+
 
