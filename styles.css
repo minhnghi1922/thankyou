@@ -9,20 +9,10 @@ body {
     align-items: center;
     color: #ffffff;
 
-    /* Nhiều lớp background: gradient + candy cane + ánh sáng */
+    /* Nền chính: hình Noel + lớp phủ tối nhẹ để dễ đọc chữ */
     background:
-        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.10) 0, transparent 55%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.14) 0, transparent 55%),
-        repeating-linear-gradient(
-            45deg,
-            rgba(255, 255, 255, 0.10) 0,
-            rgba(255, 255, 255, 0.10) 10px,
-            transparent 10px,
-            transparent 20px
-        ),
-        linear-gradient(135deg, #ff3b3f, #ff6b81, #ffb347, #22c55e, #0ea5e9);
-    background-size: auto, auto, 220px 220px, 400% 400%;
-    animation: bgShift 24s ease-in-out infinite alternate;
+        linear-gradient(rgba(5, 24, 18, 0.85), rgba(5, 24, 18, 0.92)),
+        url("xmas background.avif") center center / cover no-repeat fixed;
 }
 
 /* Card chính */
@@ -164,3 +154,4 @@ button:active {
 .container {
     position: relative;
     z-index:
+
