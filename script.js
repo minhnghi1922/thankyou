@@ -1,20 +1,20 @@
 // Dữ liệu nhân viên được convert từ Excel
 const employees = {
-    "Bui Ngoc Lan Nhi": 4642,
-    "Duong Trong Nguyen": 5090,
-    "Huynh Le Hue Tien": 5778,
-    "Huynh Thi Anh Thu": 32657,
-    "Le Thuy Linh": 5000,
-    "Le Tran Thuy Tien": 31256,
-    "Ly Dau": 2000,
-    "Luong Van Chien": 79855,
-    "Nguyen Ngoc Mi": 45110,
-    "Nguyen Phuc Thinh": 101097,
-    "Nguyen Yen Vy": 5768,
-    "Phan Gia Khai": 4952,
-    "Truong Thi Thanh Thao": 7000,
+    "Bùi Ngọc Lan Nhi": 4642,
+    "Dương Trọng Nguyễn": 5090,
+    "Huỳnh Lê Huệ Tiên": 5778,
+    "Huỳnh Thị Anh Thư": 32657,
+    "Lê Thùy Linh": 5000,
+    "Lê Trần Thủy Tiên": 31256,
+    "Lý Đạt Dậu": 2000,
+    "Lương Văn Chiến": 79855,
+    "Nguyễn Ngọc Mi": 45110,
+    "Nguyễn Phúc Thịnh": 101097,
+    "Nguyễn Yến Vy": 5768,
+    "Phan Gia Khải": 4952,
+    "Trương Thị Thanh Thảo": 7000,
     "Tô Tú Trinh": 23567,
-    "Do Thi Lan Anh": 1596
+    "Đỗ Thị Lan Anh": 1596
 };
 
 function generateCard() {
@@ -33,4 +33,5 @@ function generateCard() {
         card.classList.remove("hidden");
     }
 }
+
 
