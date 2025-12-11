@@ -9,11 +9,10 @@ body {
     align-items: center;
     color: #ffffff;
 
-    /* Nền chính: hình Noel + lớp phủ tối nhẹ để dễ đọc chữ */
-    background:
-        linear-gradient(rgba(5, 24, 18, 0.85), rgba(5, 24, 18, 0.92)),
-        url("xmas.jpg") center center / cover no-repeat fixed;
+    /* CHỈ còn hình nền, không phủ quá đậm nữa */
+    background: url("xmas.jpg") center center / cover no-repeat fixed;
 }
+
 
 /* Card chính */
 .container {
@@ -200,3 +199,4 @@ button:active {
         font-size: 20px;
     }
 }
+
