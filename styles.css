@@ -262,12 +262,12 @@ button:active {
 
     .container {
         max-width: 92%;
-        margin: 4vh auto 24px; /* Đẩy lên cao hơn */
+        margin: 0vh auto 24px; /* Đẩy lên cao hơn */
         padding: 18px 14px 20px;
     }
 
     .ecard {
-        margin-top: 16px;
+        margin-top: 10px;
     }
 }
 
@@ -276,6 +276,7 @@ button:active {
         letter-spacing: 1.2px;
     }
 }
+
 
 
 
