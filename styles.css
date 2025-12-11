@@ -10,7 +10,7 @@ body {
     color: #ffffff;
 
     /* CHỈ còn hình nền, không phủ quá đậm nữa */
-    background: url("xmass.jpg") center center / cover no-repeat fixed;
+    background: url("xmas-bg.jpg") center center / cover no-repeat fixed;
 }
 
 
@@ -248,6 +248,7 @@ button:active {
         font-size: 20px;
     }
 }
+
 
 
 
