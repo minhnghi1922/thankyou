@@ -1,95 +1,166 @@
+/* ==== NỀN GIÁNG SINH RỰC RỠ ==== */
 body {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 0;
-    padding: 40px;
-    background: url("https://i.imgur.com/3lKQF3Y.jpeg") center/cover no-repeat fixed;
-    color: white;
+    min-height: 100vh;
+    padding: 40px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+    /* Nhiều lớp background: gradient + candy cane + ánh sáng */
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.10) 0, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.14) 0, transparent 55%),
+        repeating-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.10) 0,
+            rgba(255, 255, 255, 0.10) 10px,
+            transparent 10px,
+            transparent 20px
+        ),
+        linear-gradient(135deg, #ff3b3f, #ff6b81, #ffb347, #22c55e, #0ea5e9);
+    background-size: auto, auto, 220px 220px, 400% 400%;
+    animation: bgShift 24s ease-in-out infinite alternate;
 }
 
+/* Card chính */
 .container {
+    width: 100%;
     max-width: 650px;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
-    padding: 30px;
-    background: rgba(255,255,255,0.12);
-    border-radius: 20px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.3);
+    padding: 32px 24px 28px;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    backdrop-filter: blur(14px);
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
 }
 
-.top-icon {
-    width: 140px;
-    margin-bottom: 15px;
+/* Ẩn hết các ảnh cũ – không dùng image nữa */
+.top-icon,
+.ecard-img {
+    display: none;
 }
 
+/* Tiêu đề rực rỡ, trẻ trung */
 .title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.7);
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 4px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    text-shadow:
+        0 0 8px rgba(248, 250, 252, 0.7),
+        0 0 20px rgba(248, 113, 113, 0.9);
 }
 
-input {
-    width: 80%;
-    padding: 14px;
-    border-radius: 10px;
+/* Input gõ tên */
+#nameInput {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px 14px;
+    border-radius: 999px;
     border: none;
-    font-size: 20px;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 14px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+    background: rgba(15, 23, 42, 0.35);
+    color: #f9fafb;
 }
 
+#nameInput::placeholder {
+    color: rgba(248, 250, 252, 0.7);
+}
+
+/* Nút bấm xem thiệp */
 button {
-    margin-top: 15px;
-    padding: 14px 26px;
-    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 22px;
+    border-radius: 999px;
     border: none;
-    border-radius: 12px;
-    background: linear-gradient(45deg, #ff3333, #ff9900);
-    color: white;
     cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 4px;
+
+    background: linear-gradient(135deg, #22c55e, #a3e635);
+    color: #052e16;
+    box-shadow:
+        0 10px 25px rgba(22, 163, 74, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: translateY(-1px) scale(1.02);
+    filter: brightness(1.05);
+    box-shadow:
+        0 16px 35px rgba(22, 163, 74, 0.75),
+        0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
+button:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow:
+        0 8px 18px rgba(22, 163, 74, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Khung thiệp sau khi tra cứu */
 .ecard {
-    margin-top: 30px;
-    padding: 25px;
-    background: rgba(255,255,255,0.18);
-    border-radius: 16px;
-    color: white;
-    font-size: 20px;
-    line-height: 1.4;
-    animation: fadeIn 0.6s ease-out;
+    margin-top: 20px;
+    padding: 18px 18px 16px;
+    border-radius: 18px;
+    background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.2), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(254, 249, 195, 0.25), transparent 55%),
+                rgba(15, 23, 42, 0.65);
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.45s ease-out;
 }
 
-.ecard-img {
-    width: 170px;
-    margin-bottom: 10px;
+.ecard p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
 }
 
+.ecard strong {
+    color: #facc15;
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.85);
+}
+
+/* Ẩn/hiện thiệp */
 .hidden {
     display: none;
 }
 
-/* Snow animation */
+/* Lớp tuyết rơi bằng CSS, không dùng hình */
 .snow {
-    pointer-events: none;
     position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0; left: 0;
-    background-image: url("https://i.imgur.com/u6KpKfY.png");
-    animation: snow 12s linear infinite;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0.9) 2px, transparent 3px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.7) 1.5px, transparent 3px);
+    background-size: 40px 40px, 65px 65px;
+    opacity: 0.8;
+    animation: snow 18s linear infinite;
+    z-index: 1;
 }
 
-@keyframes snow {
-    to { background-position: 0 1000px; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+.container {
+    position: relative;
+    z-index:
