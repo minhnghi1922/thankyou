@@ -238,34 +238,35 @@ button:active {
 
 /* MOBILE LAYOUT */
 @media (max-width: 768px) {
+
     body {
-        /* Hủy flex để nó không căn giữa nữa */
-        display: block;
+        /* Ngắt flex desktop */
+        display: block !important;
+
         margin: 0;
-        padding: 22vh 12px 24px;  /* 10vh khoảng trống trên cùng, đẩy box xuống vùng trời */
+        padding: 22vh 12px 24px;  /* chỉnh vị trí box ở đây */
 
         background-image: url("xmas-bgg.jpg");
         background-repeat: no-repeat;
-        background-size: contain;      /* cố gắng không cắt hình */
+        background-size: contain;
         background-position: top center;
-        background-color: #bde9ff;     /* màu trời nhạt cho phần trống */
+        background-color: #bde9ff;
     }
 
     .container {
         max-width: 92%;
-        margin: 0 auto 24px;   /* không còn margin-top, dùng padding-top của body */
+        margin: 0 auto;
         padding: 18px 14px 20px;
     }
 
     .ecard {
         margin-top: 12px;
-        padding: 18px 14px 18px;
     }
 
     .title {
         font-size: 20px;
         letter-spacing: 1.2px;
     }
-}
 
+}
 
