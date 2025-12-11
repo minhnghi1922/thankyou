@@ -10,7 +10,7 @@ body {
     color: #ffffff;
 
     /* CHỈ còn hình nền, không phủ quá đậm nữa */
-    background: url("xmas-bg.jpg") center center / cover no-repeat fixed;
+    background: url("xmas-bgg.jpg") center center / cover no-repeat fixed;
 }
 
 
@@ -253,7 +253,7 @@ button:active {
 @media (max-width: 768px) {
     body {
         /* Hiển thị toàn bộ bức tranh nhiều nhất có thể */
-        background-image: url("bg-christmas.jpg");
+        background-image: url("xmas-bgg.jpg");
         background-repeat: no-repeat;
         background-size: contain;      /* cố gắng không cắt hình */
         background-position: center bottom;
@@ -276,5 +276,6 @@ button:active {
         letter-spacing: 1.2px;
     }
 }
+
 
 
