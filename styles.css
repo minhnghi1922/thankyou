@@ -107,65 +107,77 @@ button:active {
 }
 
 /* Khung thiệp sau khi tra cứu */
-/* Thiệp cảm ơn lớn hơn, nổi bật hơn */
+/* Thiệp to, sang, tone ĐỎ – VÀNG */
 .ecard {
-    margin: 28px auto 0;
-    padding: 26px 32px 24px;
-    max-width: 620px;
+    margin: 32px auto 0;
+    padding: 30px 34px 26px;
+    max-width: 650px;
 
-    border-radius: 26px;
+    border-radius: 28px;
     background:
-        radial-gradient(circle at top left, rgba(248, 250, 252, 0.15), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(254, 249, 195, 0.22), transparent 55%),
-        rgba(15, 23, 42, 0.78); /* nền đậm để chữ vàng nổi */
+        radial-gradient(circle at top left, rgba(255, 237, 200, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(255, 219, 152, 0.25), transparent 55%),
+        rgba(40, 14, 14, 0.82); /* đỏ rượu vang đậm – sang */
 
     box-shadow:
-        0 18px 40px rgba(15, 23, 42, 0.85),
-        0 0 0 1px rgba(255, 255, 255, 0.22);
+        0 20px 40px rgba(90, 0, 0, 0.7),
+        0 0 0 1px rgba(255, 215, 100, 0.28); /* viền vàng nhẹ */
 
     position: relative;
     overflow: hidden;
     animation: fadeIn 0.45s ease-out;
 }
 
-/* Viền màu Noel chạy quanh box */
+/* Viền gradient ĐỎ → VÀNG chạy quanh – nổi bật */
 .ecard::before {
     content: "";
     position: absolute;
     inset: -2px;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(135deg, #f97316, #facc15, #22c55e, #0ea5e9);
+
+    background: linear-gradient(
+        135deg,
+        #ff2e2e,   /* Đỏ tươi */
+        #ff6b35,   /* Đỏ cam */
+        #ffb600,   /* Vàng đậm */
+        #ffe47a    /* Vàng nhạt */
+    );
+
     -webkit-mask:
         linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
-    opacity: 0.9;
+    opacity: 1;
 }
 
-/* Chấm tròn trang trí ở góc */
+/* Icon trang trí – đổi sang 🎁 cho hợp màu đỏ vàng */
 .ecard::after {
-    content: "🎄";
+    content: "🎁";
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 16px;
-    font-size: 22px;
+    font-size: 26px;
+    opacity: 0.95;
 }
 
-/* Nội dung text trong thiệp */
+/* Nội dung */
 .ecard p {
     position: relative;
     z-index: 1;
     margin: 0;
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 17px;
+    color: #fff9e6; /* vàng kem dễ đọc */
 }
 
-/* Tên & số giờ nổi bật hơn */
+/* Tên và số giờ – highlight vàng mạnh */
 .ecard strong {
-    color: #facc15;
-    text-shadow: 0 0 12px rgba(250, 204, 21, 0.9);
+    color: #ffd34d;
+    text-shadow:
+        0 0 10px rgba(255, 196, 0, 0.9),
+        0 0 18px rgba(255, 210, 90, 0.75);
 }
 
 /* Ẩn/hiện thiệp */
@@ -236,6 +248,7 @@ button:active {
         font-size: 20px;
     }
 }
+
 
 
 
