@@ -262,20 +262,21 @@ button:active {
 
     .container {
         max-width: 92%;
-        margin: 12vh auto 24px;        /* đẩy card lên một chút */
+        margin: 4vh auto 24px; /* Đẩy lên cao hơn */
         padding: 18px 14px 20px;
     }
 
     .ecard {
-        margin: 20px auto 0;
-        padding: 18px 16px 18px;
+        margin-top: 16px;
     }
+}
 
     .title {
         font-size: 20px;
         letter-spacing: 1.2px;
     }
 }
+
 
 
 
