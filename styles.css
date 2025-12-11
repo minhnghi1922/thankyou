@@ -244,7 +244,7 @@ button:active {
         display: block !important;
 
         margin: 0;
-        padding: 2vh 12px 24px;  /* chỉnh vị trí box ở đây */
+        padding: 0vh 12px 24px;  /* chỉnh vị trí box ở đây */
 
         background-image: url("xmas-bgg.jpg");
         background-repeat: no-repeat;
@@ -269,5 +269,6 @@ button:active {
     }
 
 }
+
 
 
