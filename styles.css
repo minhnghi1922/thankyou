@@ -46,10 +46,9 @@ body {
     letter-spacing: 1.5px;
     font-weight: 800;
 
-    color: #ff3b3f;  /* 🎯 đỏ tươi */
-    text-shadow:
-        0 0 10px rgba(248, 113, 113, 0.9),
-        0 0 20px rgba(248, 250, 252, 0.7);
+     /* Đổi sang đỏ Kon Lou, KHÔNG còn glow nữa */
+    color: #ff3b3f;
+    text-shadow: none;
 }
 
 /* Input gõ tên */
@@ -253,29 +252,29 @@ button:active {
 }
 @media (max-width: 768px) {
     body {
-        /* cho mobile: hiện trọn bức hình */
-        background: url("xmas-bg") center bottom / contain no-repeat;
-        background-color: #bde9ff; /* màu trời nhạt lấp chỗ trống trên/dưới */
+        /* Hiển thị toàn bộ bức tranh nhiều nhất có thể */
+        background-image: url("bg-christmas.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;      /* cố gắng không cắt hình */
+        background-position: center bottom;
+        background-color: #bde9ff;     /* màu trời nhạt cho phần trống */
     }
 
     .container {
-        padding: 24px 14px 20px;
-        margin: 40px 10px;
+        max-width: 92%;
+        margin: 12vh auto 24px;        /* đẩy card lên một chút */
+        padding: 18px 14px 20px;
     }
 
     .ecard {
-        margin: 24px auto 0;
-        padding: 22px 18px 20px;
+        margin: 20px auto 0;
+        padding: 18px 16px 18px;
     }
 
     .title {
         font-size: 20px;
+        letter-spacing: 1.2px;
     }
 }
-
-
-
-
-
 
 
