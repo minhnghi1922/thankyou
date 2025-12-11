@@ -12,7 +12,7 @@ body {
     /* Nền chính: hình Noel + lớp phủ tối nhẹ để dễ đọc chữ */
     background:
         linear-gradient(rgba(5, 24, 18, 0.85), rgba(5, 24, 18, 0.92)),
-        url("xmas background.avif") center center / cover no-repeat fixed;
+        url("xmas.jpg") center center / cover no-repeat fixed;
 }
 
 /* Card chính */
@@ -154,4 +154,5 @@ button:active {
 .container {
     position: relative;
     z-index:
+
 
