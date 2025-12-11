@@ -13,7 +13,7 @@ const employees = {
     "Nguyen Yen Vy": 5768,
     "Phan Gia Khai": 4952,
     "Truong Thi Thanh Thao": 7000,
-    "To Tu Trinh": 23567,
+    "Tô Tú Trinh": 23567,
     "Do Thi Lan Anh": 1596
 };
 
@@ -33,3 +33,4 @@ function generateCard() {
         card.classList.remove("hidden");
     }
 }
+
