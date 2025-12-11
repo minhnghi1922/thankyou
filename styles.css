@@ -240,11 +240,12 @@ button:active {
 @media (max-width: 768px) {
 
     body {
-        /* Ngắt flex desktop */
-        display: block !important;
-
+        /* Ngắt flex của desktop */
+        display: block;
         margin: 0;
-        padding: 0vh 12px 24px;  /* chỉnh vị trí box ở đây */
+        padding: 0;
+        min-height: 100vh;
+        position: relative;
 
         background-image: url("xmas-bgg.jpg");
         background-repeat: no-repeat;
@@ -253,22 +254,29 @@ button:active {
         background-color: #bde9ff;
     }
 
+    /* ĐẶT NG NGUYÊN BOX VÀO VỊ TRÍ CỤ THỂ */
     .container {
+        position: absolute;
+        top: 18vh;              /* ↑ chỉnh số này để dời lên/xuống */
+        left: 50%;
+        transform: translateX(-50%);
+
         max-width: 92%;
-        margin: 0 auto;
         padding: 18px 14px 20px;
+        margin: 0;
     }
 
     .ecard {
         margin-top: 12px;
+        padding: 18px 14px 18px;
     }
 
     .title {
         font-size: 20px;
         letter-spacing: 1.2px;
     }
-
 }
+
 
 
 
